@@ -1,4 +1,4 @@
-package com.singh.oop2;
+package com.singh.oop2.encapsulation;
 
 public class Insect {
 

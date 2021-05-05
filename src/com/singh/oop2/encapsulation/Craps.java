@@ -1,6 +1,4 @@
-package com.singh.oop2;
-
-import java.util.TreeMap;
+package com.singh.oop2.encapsulation;
 
 public class Craps {
 
