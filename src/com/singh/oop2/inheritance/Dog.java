@@ -12,4 +12,9 @@ public class Dog extends Canine {
     public void fetch() {
         System.out.println("Run\nClinch\nReturn");
     }
+
+    public static void main(String[] args) {
+        Dog spot = new Dog("Spot", 9.6);
+        spot.bark();
+    }
 }
