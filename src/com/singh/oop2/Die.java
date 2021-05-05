@@ -6,7 +6,7 @@ public class Die {
 
     public static final int SIDES = 6;
     private int faceValue;
-    private Random rand;
+    private final Random rand;
 
     public Die() {
         faceValue = 1;
