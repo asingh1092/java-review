@@ -1,0 +1,5 @@
+# IDE specific
+/.idea/*
+
+# Compiled files
+/out/*
