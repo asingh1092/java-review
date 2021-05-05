@@ -1,6 +1,8 @@
 package com.singh.oop2.inheritance;
 
-public class Canine {
+
+// abstract class must have at least one abstract method
+public abstract class Canine {
 
     // protected means inherited classes and classes in the same package
     // can access it
@@ -13,4 +15,6 @@ public class Canine {
     public void bark() {
         System.out.println("Woof! Woof!");
     }
+
+    public abstract void groom();
 }
