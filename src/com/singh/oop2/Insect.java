@@ -108,11 +108,18 @@ public class Insect {
         return FACTS[index];
     }
 
+    public String toString() {
+        return "weight: " + weight + ", x: " + x + ", y: " + y;
+    }
+
     public static void main(String[] args) {
         // main method + testing area
         System.out.println("Insect Population: " + population);
         Insect bug1 = new Insect(10, 100, 90);
         System.out.println("Insect Population: " + population);
         Insect bug2 = new Insect(9.5, -300, 400);
+
+        System.out.println(bug1);
+        System.out.println(bug2);
     }
 }
