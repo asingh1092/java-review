@@ -1,5 +1,7 @@
 package com.singh.oop2.inheritance;
 
+import com.singh.oop2.interfaces.Groomable;
+
 public class Wolf extends Canine {
 
     protected int rank;

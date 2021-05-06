@@ -3,17 +3,18 @@ package com.singh.oop2.interfaces;
 import com.singh.oop2.inheritance.Canine;
 import com.singh.oop2.inheritance.Wolf;
 
-public class GroomEvverything {
+public class GroomEverything {
     public static void main(String[] args) {
-        Canine[] canines = {
+        Groomable[] groomer = {
                 new Wolf(17.01, 3),
                 new Poodle("Richie", 9, "Lux Brand", "Rich Brand"),
                 new Wolf(16, 5),
                 new Poodle("Pixy", 4, "Top Shelf", "Only the Best"),
+                new Car("Yuhina", "Spark", 2037),
         };
 
-        for (Canine canine: canines) {
-            canine.groom();
+        for (Groomable g: groomer) { // groom everything
+            g.groom();
         }
     }
 }

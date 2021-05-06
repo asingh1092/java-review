@@ -1,6 +1,6 @@
 package com.singh.oop2.interfaces;
 
-public class Car {
+public class Car implements Groomable {
     private String make;
     private String model;
     private int year;
