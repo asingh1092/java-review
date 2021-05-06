@@ -1,7 +1,4 @@
-package com.singh.oop2.interfaces;
-
-import com.singh.oop2.inheritance.Canine;
-import com.singh.oop2.inheritance.Wolf;
+package com.singh.oop2.inheritance;
 
 public class GroomEverything {
     public static void main(String[] args) {

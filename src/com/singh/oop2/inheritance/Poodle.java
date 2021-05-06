@@ -1,4 +1,4 @@
-package com.singh.oop2.interfaces;
+package com.singh.oop2.inheritance;
 
 import com.singh.oop2.inheritance.Dog;
 
