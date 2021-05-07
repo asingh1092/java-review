@@ -8,9 +8,10 @@ public class MergeSort {
             if (list[start] <= list[end]) {
                 return;
             } else { // swap
-                int temp = list[start];
-                list[start] = list[end];
-                list[end] = temp;
+                Utils.swap(list[start], list[end]);
+                // int temp = list[start];
+                // list[start] = list[end];
+                // list[end] = temp;
             }
         }
 
