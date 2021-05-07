@@ -22,7 +22,7 @@ public class Sort {
         }
     }
 
-
+    // nerge sort is nlog(n) in both cases (linearithmic) regardless of sort order
     public static void mergeSort(int[] list, int start, int end) {
         if (start == end) {
             return;
