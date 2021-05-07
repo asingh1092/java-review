@@ -14,9 +14,10 @@ public class SelectionSort {
                 }
             }
             // Swap
-            nextSmallest = list[minIndex];
-            list[minIndex] = list[unSortedStart];
-            list[unSortedStart] = nextSmallest;
+            Utils.swap(list[minIndex], list[unSortedStart]);
+            // nextSmallest = list[minIndex];
+            // list[minIndex] = list[unSortedStart];
+            // list[unSortedStart] = nextSmallest;
         }
     }
 }
