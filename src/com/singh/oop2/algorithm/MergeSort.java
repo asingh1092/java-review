@@ -69,9 +69,10 @@ public class MergeSort {
 
                 return;
             } else { // swap
-                Comparable temp = list[start];
-                list[start] = list[end];
-                list[end] = temp;
+                Utils.swap(list[start], list[end]);
+                // Comparable temp = list[start];
+                // list[start] = list[end];
+                // list[end] = temp;
             }
         }
 
