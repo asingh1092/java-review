@@ -38,8 +38,8 @@ public class Search {
     }
 
     // binary search is logarithmic O(log(n))
+    // binear search using recursion
     public static int binarySearch(int target, int[] list) {
-        int ret = -1;
         int middleIndex = list.length / 2;
         int middleValue = list[middleIndex];
         if (target == middleValue) {
@@ -55,6 +55,7 @@ public class Search {
         return -1;
     }
 
+    // binary search using iteration
     public static int binarySearch(Comparable[] list, Comparable target) {
         int start = 0, end = list.length - 1, mid = 0;
 
