@@ -33,6 +33,10 @@ public class Wolf extends Canine implements Comparable<Wolf> {
         return ("Rank: " + rank + ", Size: " + size);
     }
 
+    public void pay() {
+        System.out.println("Grrrr! Warning, don’t try and chase me for payment. I'm a wolf. Run Run Run!");
+    }
+
     public static void main(String[] args) {
         Wolf alpha = new Wolf(17.1, 1);
         Wolf puppy = new Wolf(3, 10);
