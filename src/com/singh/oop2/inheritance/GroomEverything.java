@@ -13,7 +13,7 @@ public class GroomEverything {
         for (Groomable g: groomer) { // groom everything
             g.groom();
             g.pay();
-            Groomable.calculateTip(39.99, 20);
+            System.out.println("The tip is: " +  Groomable.calculateTip(39.99, 20));
         }
     }
 }
