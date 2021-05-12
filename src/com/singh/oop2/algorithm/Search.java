@@ -39,6 +39,7 @@ public class Search {
 
     // binary search is logarithmic O(log(n))
     public static int binarySearch(int target, int[] list) {
+        int ret = -1;
         int middleIndex = list.length / 2;
         int middleValue = list[middleIndex];
         if (target == middleValue) {
@@ -50,6 +51,21 @@ public class Search {
         } else {
             int[] leftSide = Arrays.copyOfRange(list, 0, middleIndex);
             binarySearch(target, leftSide);
+        }
+        return -1;
+    }
+
+    public static int binarySearch(Comparable[] list, Comparable target) {
+        int start = 0, end = list.length - 1, mid = 0;
+
+        while (start <= end) {
+            mid = (start + end) / 2;
+            if (list[mid].compareTo(target) == 0)
+                return mid;
+            else if (target.compareTo(list[mid]) < 0)
+                end = mid -1;
+            else
+                start = mid + 1;
         }
         return -1;
     }
