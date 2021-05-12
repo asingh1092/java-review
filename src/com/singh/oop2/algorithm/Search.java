@@ -1,5 +1,6 @@
 package com.singh.oop2.algorithm;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Search {
@@ -15,6 +16,7 @@ public class Search {
         return result;
     }
 
+    // the linear search algo is at worst linear O(n)
     public static int searchIntArray(int target, int[] arr) {
         for (int element : arr) {
             if (element == target) {
@@ -31,6 +33,23 @@ public class Search {
                 return index;
             else
                 index++;
+        }
+        return -1;
+    }
+
+    // binary search is logarithmic O(log(n))
+    public static int binarySearch(int target, int[] list) {
+        int middleIndex = list.length / 2;
+        int middleValue = list[middleIndex];
+        if (target == middleValue) {
+            return middleValue;
+        }
+        if (target > middleValue) {
+            int[] rightSide = Arrays.copyOfRange(list, middleIndex, list.length);
+            binarySearch(target, rightSide);
+        } else {
+            int[] leftSide = Arrays.copyOfRange(list, 0, middleIndex);
+            binarySearch(target, leftSide);
         }
         return -1;
     }
