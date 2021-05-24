@@ -15,6 +15,10 @@ public class Wolf extends Canine implements Comparable<Wolf> {
         return rank;
     }
 
+    public double getSize() {
+        return size;
+    }
+
     public void bark() { // 3 times default Canine bark
         for (int i = 1; i <= 3; i++) {
             super.bark();
