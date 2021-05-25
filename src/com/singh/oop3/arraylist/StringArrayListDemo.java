@@ -1,4 +1,4 @@
-package com.singh.oop3.generics;
+package com.singh.oop3.arraylist;
 
 import java.util.ArrayList;
 
