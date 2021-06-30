@@ -64,7 +64,7 @@ public class Search {
             if (list[mid].compareTo(target) == 0)
                 return mid;
             else if (target.compareTo(list[mid]) < 0)
-                end = mid -1;
+                end = mid - 1;
             else
                 start = mid + 1;
         }

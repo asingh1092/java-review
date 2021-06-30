@@ -9,17 +9,15 @@ public class CombinedCatchExceptions {
         System.out.print("Enter a Fahrenheit value: ");
         try {
             int fahrenheit = input.nextInt();
-            double celsius = (5.0/9) * (fahrenheit - 32);
+            double celsius = (5.0 / 9) * (fahrenheit - 32);
             System.out.printf("Fahrenheit: %d\n", fahrenheit);
             System.out.printf("Celsius:    %.1f\n", celsius);
-            double x = 1331/fahrenheit;
-        }
-        catch (InputMismatchException | ArithmeticException e) {
+            double x = 1331 / fahrenheit;
+        } catch (InputMismatchException | ArithmeticException e) {
             System.out.println("Sorry, that wasn't a valid value.");
             System.out.println("Please re-run the program again.");
             System.out.println("However, enter a non-zero integer.");
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }

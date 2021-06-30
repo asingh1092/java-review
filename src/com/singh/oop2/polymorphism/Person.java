@@ -5,6 +5,7 @@ public class Person {
     public void talk() {
         //method details
     }
+
     public boolean isHealthy() {
         //method details
         return false;

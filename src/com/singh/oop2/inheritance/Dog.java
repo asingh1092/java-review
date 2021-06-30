@@ -9,24 +9,6 @@ public class Dog extends Canine {
         this.name = name;
     }
 
-    public void fetch() {
-        System.out.println("Run\nClinch\nReturn");
-    }
-
-    public String toString() {
-        return ("Name: " + name + "; Size: " + size);
-    }
-
-    public void groom() {}
-
-    public boolean equals(Object o) {
-        if (!(o instanceof Dog)) {
-            return false;
-        }
-        Dog dog = (Dog) o;
-        return ((dog.size == size) && (dog.name.equals(name)));
-    }
-
     public static void main(String[] args) {
         Dog spot = new Dog("Spot", 9.6000001);
         spot.bark();
@@ -35,5 +17,24 @@ public class Dog extends Canine {
         Dog dog2 = new Dog("Spot", 9.6);
         System.out.println(dog1.equals(dog2));
         System.out.println(dog1.equals(spot));
+    }
+
+    public void fetch() {
+        System.out.println("Run\nClinch\nReturn");
+    }
+
+    public String toString() {
+        return ("Name: " + name + "; Size: " + size);
+    }
+
+    public void groom() {
+    }
+
+    public boolean equals(Object o) {
+        if (!(o instanceof Dog)) {
+            return false;
+        }
+        Dog dog = (Dog) o;
+        return ((dog.size == size) && (dog.name.equals(name)));
     }
 }

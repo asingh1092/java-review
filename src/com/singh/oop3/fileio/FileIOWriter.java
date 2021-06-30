@@ -11,7 +11,7 @@ public class FileIOWriter {
         String word = args[1];
 
         File fileIn = new File(inputFileName);
-        File fileOut = new File(word+"In"+inputFileName);
+        File fileOut = new File(word + "In" + inputFileName);
 
         Scanner fileScan = null;
         PrintWriter filePrint = null;

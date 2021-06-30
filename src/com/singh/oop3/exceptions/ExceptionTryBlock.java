@@ -9,7 +9,7 @@ public class ExceptionTryBlock {
         System.out.print("Enter a Fahrenheit value: ");
         try {
             int fahrenheit = input.nextInt();
-            double celsius = (5.0/9) * (fahrenheit - 32);
+            double celsius = (5.0 / 9) * (fahrenheit - 32);
             System.out.printf("Fahrenheit: %d\n", fahrenheit);
             System.out.printf("Celsius:    %.1f\n", celsius);
         } catch (InputMismatchException e) {

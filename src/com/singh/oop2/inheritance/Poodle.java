@@ -1,7 +1,5 @@
 package com.singh.oop2.inheritance;
 
-import com.singh.oop2.inheritance.Dog;
-
 public class Poodle extends Dog {
 
     private String favoriteShampoo;

@@ -17,7 +17,7 @@ public class FileIOThrownException {
         System.out.printf("Lines in %s containing %s:\n", args[0], args[1]);
 
         while (scan.hasNextLine()) {
-            String line  = scan.nextLine();
+            String line = scan.nextLine();
             if (line.contains(word)) {
                 System.out.println(lineCount + ": " + line);
             }

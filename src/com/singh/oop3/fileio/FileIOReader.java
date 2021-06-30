@@ -26,8 +26,7 @@ public class FileIOReader {
             }
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
-        }
-        finally {
+        } finally {
             if (fileScan != null) {
                 fileScan.close();
             }

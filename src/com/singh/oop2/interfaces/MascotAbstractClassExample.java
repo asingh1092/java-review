@@ -12,16 +12,23 @@ public abstract class MascotAbstractClassExample {
     private String name;
 
     public abstract void celebrate();
+
     public abstract void whine();
+
     public abstract void chant();
+
     public abstract void run();
+
+    public String getName() {
+        return name;
+    }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getName() {
-        return name;
+    public int getVolume() {
+        return volume;
     }
 
     public void setVolume(int volume) {
@@ -30,18 +37,14 @@ public abstract class MascotAbstractClassExample {
         }
     }
 
-    public int getVolume() {
-        return volume;
+    public int getSpeed() {
+        return speed;
     }
 
     public void setSpeed(int speed) {
         if (speed <= MAX_SPEED) {
             this.speed = speed;
         }
-    }
-
-    public int getSpeed() {
-        return speed;
     }
 
 }

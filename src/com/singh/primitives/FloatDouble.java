@@ -2,11 +2,6 @@ package com.singh.primitives;
 
 public class FloatDouble {
 
-    public void convertPoundsToKilos(double pounds) {
-        double poundToKilo = 0.45359237;
-        System.out.println("Converted " + pounds + " pounds to " + pounds * poundToKilo);
-    }
-
     public static void main(StringReview[] args) {
 
         float myMinFloatValue = Float.MIN_VALUE;
@@ -26,7 +21,7 @@ public class FloatDouble {
         int myIntValue = 5 / 3;
         float myFloatValue = 5f / 3f;
         float myCastedFloatValue = (float) 5.25; // Casted, but its easier to just do 5.25f
-        double myDoubleValue = 5d / 3d ;
+        double myDoubleValue = 5d / 3d;
         System.out.println("MyIntValue = " + myIntValue);
         System.out.println("MyFloatValue = " + myFloatValue);
         System.out.println("MyDoubleValue = " + myDoubleValue);
@@ -42,5 +37,10 @@ public class FloatDouble {
         floatDouble.convertPoundsToKilos(4);
         floatDouble.convertPoundsToKilos(4.987);
         floatDouble.convertPoundsToKilos(5);
+    }
+
+    public void convertPoundsToKilos(double pounds) {
+        double poundToKilo = 0.45359237;
+        System.out.println("Converted " + pounds + " pounds to " + pounds * poundToKilo);
     }
 }

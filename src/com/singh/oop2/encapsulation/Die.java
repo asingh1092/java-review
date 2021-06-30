@@ -5,12 +5,20 @@ import java.util.Random;
 public class Die {
 
     public static final int SIDES = 6;
-    private int faceValue;
     private final Random rand;
+    private int faceValue;
 
     public Die() {
         faceValue = 1;
         rand = new Random();
+    }
+
+    public static void main(String[] args) {
+        Die die1 = new Die();
+
+        System.out.println(die1);
+        System.out.println(die1.roll());
+        System.out.println(die1.roll());
     }
 
     public int getFaceValue() {
@@ -28,13 +36,5 @@ public class Die {
 
     public String toString() {
         return "Die with face value: " + faceValue;
-    }
-
-    public static void main(String[] args) {
-        Die die1 = new Die();
-
-        System.out.println(die1);
-        System.out.println(die1.roll());
-        System.out.println(die1.roll());
     }
 }

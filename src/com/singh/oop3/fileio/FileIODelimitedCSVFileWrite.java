@@ -35,14 +35,9 @@ public class FileIODelimitedCSVFileWrite {
             for (Wolf wolf : pack) {
                 filePrint.println(wolf.getRank() + "," + wolf.getSize());
             }
-        }
-
-        catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
-        }
-
-
-        finally {
+        } finally {
             if (filePrint != null) {
                 filePrint.close();
             }

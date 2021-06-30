@@ -13,7 +13,7 @@ public class AutoboxingIntArrayListDemo {
         System.out.println(scores.toString());
 
         int sum = 0;
-        for (Integer score: scores) { //for each loosp works here!
+        for (Integer score : scores) { //for each loosp works here!
             sum += score; // autoboxing!
         }
         System.out.println("Total points: " + sum);

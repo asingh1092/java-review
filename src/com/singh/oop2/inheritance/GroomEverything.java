@@ -10,10 +10,10 @@ public class GroomEverything {
                 new Car("Yuhina", "Spark", 2037),
         };
 
-        for (Groomable g: groomer) { // groom everything
+        for (Groomable g : groomer) { // groom everything
             g.groom();
             g.pay();
-            System.out.println("The tip is: " +  Groomable.calculateTip(39.99, 20));
+            System.out.println("The tip is: " + Groomable.calculateTip(39.99, 20));
         }
     }
 }

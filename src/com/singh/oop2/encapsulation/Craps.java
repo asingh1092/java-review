@@ -11,10 +11,18 @@ public class Craps {
         die2 = new Die();
     }
 
+    public static void main(String[] args) {
+        // create an instance of the game of craps
+        Craps game = new Craps();
+
+        // Start the game;
+        game.go();
+    }
+
     private int toss() {
         int total = die1.roll() + die2.roll();
         System.out.println("Die One: " + die1.getFaceValue()
-                            + ", Die Two: " + die2.getFaceValue());
+                + ", Die Two: " + die2.getFaceValue());
         return total;
     }
 
@@ -23,11 +31,9 @@ public class Craps {
         System.out.println("Point: " + point);
         if ((point == 7) || (point == 11)) {
             System.out.println("Winner!");
-        }
-        else if ((point == 2) || (point == 3) || (point == 12)) {
+        } else if ((point == 2) || (point == 3) || (point == 12)) {
             System.out.println("You lost!");
-        }
-        else {
+        } else {
             System.out.println("Entering Stage 2...");
             stageTwo();
         }
@@ -41,19 +47,10 @@ public class Craps {
             System.out.println("Total: " + total);
             if (total == point) {
                 System.out.println("Winner!");
-            }
-            else if (total == 7) {
+            } else if (total == 7) {
                 System.out.println("You lost!");
                 endGame = true;
             }
         }
-    }
-
-    public static void main(String[] args) {
-        // create an instance of the game of craps
-        Craps game = new Craps();
-
-        // Start the game;
-        game.go();
     }
 }

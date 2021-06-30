@@ -10,14 +10,6 @@ public class GenericBin<T> {
         this.content = content;
     }
 
-    public T getContent() {
-        return content;
-    }
-
-    public void setContent(T content) {
-        this.content = content;
-    }
-
     public static void main(String[] args) {
         GenericBin<String> test = new GenericBin<>("I'm a basic String");
         test.setContent("short and stout");
@@ -26,5 +18,13 @@ public class GenericBin<T> {
         GenericBin<Car> test2 = new GenericBin<Car>(new Car("Yuhina", "Spark", 2037));
         test2.setContent(new Car("AnotherYuhina", "Spark2", 2050));
         System.out.println(test2.toString());
+    }
+
+    public T getContent() {
+        return content;
+    }
+
+    public void setContent(T content) {
+        this.content = content;
     }
 }

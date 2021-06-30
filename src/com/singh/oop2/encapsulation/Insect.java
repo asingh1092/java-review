@@ -2,23 +2,22 @@ package com.singh.oop2.encapsulation;
 
 public class Insect {
 
-    // instance variables
-    private double weight;
-    private int x;
-    private int y;
-
     // static constants/variables
     public static final double DEFAULT_WEIGHT = 0.0;
     public static final int DEFAULT_X = 0;
     public static final int DEFAULT_Y = 0;
     public static final double DIST_WEIGHT_LOSS_FACTOR = 0.0001;
-    private static int population = 0;
     private static final String[] FACTS = {
             "The two main groups of insects are winged and wingless.",
             "There are more than 1 million insect species.",
             "Insects are cold-blooded.",
             "Spiders are not considered insects."
     };
+    private static int population = 0;
+    // instance variables
+    private double weight;
+    private int x;
+    private int y;
 
     //constructors
     public Insect() {
@@ -38,37 +37,8 @@ public class Insect {
 
     // methods ------------------------------------
 
-    // getters
-    public double getWeight() {
-        return weight;
-    }
-
-    public int getX() {
-        return x;
-    }
-    public int getY() {
-        return y;
-    }
-
     public static int getPopulation() {
         return population;
-    }
-
-    // setters
-    public void setWeight(double value) {
-        weight = value;
-    }
-
-    public void setX(int x) {
-        if (isLegalX(x)) {
-            this.x = x;
-        }
-    }
-
-    public void setY(int y) {
-        if (isLegalY(y)) {
-            this.y = y;
-        }
     }
 
     public static boolean isLegalX(int value) {
@@ -79,6 +49,55 @@ public class Insect {
         return value >= 0;
     }
 
+    private static double calculateDistance(double x1, double y1, double x2, double y2) {
+        return Math.sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1));
+    }
+
+    public static String produceRandomFact() {
+        int index = (int) (Math.random() * ((FACTS.length - 1) + 1));
+        return FACTS[index];
+    }
+
+    public static void main(String[] args) {
+        // main method + testing area
+        System.out.println("Insect Population: " + population);
+        Insect bug1 = new Insect(10, 100, 90);
+        System.out.println("Insect Population: " + population);
+        Insect bug2 = new Insect(9.5, -300, 400);
+
+        System.out.println(bug1);
+        System.out.println(bug2);
+    }
+
+    // getters
+    public double getWeight() {
+        return weight;
+    }
+
+    // setters
+    public void setWeight(double value) {
+        weight = value;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        if (isLegalX(x)) {
+            this.x = x;
+        }
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        if (isLegalY(y)) {
+            this.y = y;
+        }
+    }
 
     // behaviors
     public void eat(double amount) {
@@ -93,33 +112,12 @@ public class Insect {
             y = newY;
             weight = weight * DIST_WEIGHT_LOSS_FACTOR * distance;
             System.out.printf("Moved %.2f units\n", distance);
-        }
-        else {
+        } else {
             System.out.println("Staying put.");
         }
     }
 
-    private static double calculateDistance(double x1, double y1, double x2, double y2) {
-        return Math.sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1));
-    }
-
-    public static String produceRandomFact() {
-        int index = (int) (Math.random() * ((FACTS.length - 1) + 1));
-        return FACTS[index];
-    }
-
     public String toString() {
         return "weight: " + weight + ", x: " + x + ", y: " + y;
-    }
-
-    public static void main(String[] args) {
-        // main method + testing area
-        System.out.println("Insect Population: " + population);
-        Insect bug1 = new Insect(10, 100, 90);
-        System.out.println("Insect Population: " + population);
-        Insect bug2 = new Insect(9.5, -300, 400);
-
-        System.out.println(bug1);
-        System.out.println(bug2);
     }
 }

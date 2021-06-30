@@ -6,7 +6,10 @@ public interface MascotInterfaceExample {
 
     // methods are public, and abstract by default
     public void celebrate();
+
     public void whine();
+
     public void chant();
+
     public void run();
 }

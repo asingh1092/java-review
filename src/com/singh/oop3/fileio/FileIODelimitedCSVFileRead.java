@@ -20,12 +20,9 @@ public class FileIODelimitedCSVFileRead {
                 allWeights[index] = Double.parseDouble(tokens[1]);
                 index++;
             }
-        }
-        catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
-        }
-
-        finally {
+        } finally {
             if (fileScan != null) {
                 fileScan.close();
             }

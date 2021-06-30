@@ -2,20 +2,24 @@ package com.singh.oop3.linkedlist;
 
 public class GenericLinkedList<E> {
 
-    private class Node<E> { //inner class
-        E data;
-        Node<E> next;
-
-        Node(E data, Node<E> next) {
-            this.data = data;
-            this.next = next;
-        }
-    }
-
     private Node<E> head; // the only instance variable of the list
 
     public GenericLinkedList() {
         head = null; // list starts off empty
+    }
+
+    public static void main(String[] args) {
+        GenericLinkedList<String> songs = new GenericLinkedList<>();
+        songs.addToFront("Yo dawg song 1");
+        songs.addToRear("This going to the be song 2");
+        songs.addToFront("This is song 3");
+        songs.addToRear("Look! Song 4");
+        songs.addToFront("Sonnnnnnggggg 5!");
+        System.out.println(songs.toString());
+        songs.removeFromFront();
+        songs.removeFromRear();
+        System.out.println(songs.toString());
+        System.out.println(songs.contains("Look! Song 4"));
     }
 
     public boolean isEmpty() {
@@ -28,7 +32,7 @@ public class GenericLinkedList<E> {
 
     public void addToRear(E newData) {
         Node<E> node = new Node<E>(newData, null); // new Node to add to Rear of list
-        Node<E>  current = head;
+        Node<E> current = head;
         if (isEmpty()) head = node; // point head to new node if list is empty
         else {
             while (current.next != null) { // the last node is the one with next = null
@@ -37,6 +41,7 @@ public class GenericLinkedList<E> {
             current.next = node;
         }
     }
+
     public String toString() {
         Node<E> current = head; // traversal starts at the front
         String result = "";
@@ -70,12 +75,10 @@ public class GenericLinkedList<E> {
 
         if (isEmpty()) {
             removedData = null;
-        }
-        else if (head.next == null) {
+        } else if (head.next == null) {
             removedData = head.data;
             head = null;
-        }
-        else {
+        } else {
             Node<E> current = head;
             while (current.next.next != null) {
                 current = current.next;
@@ -116,17 +119,13 @@ public class GenericLinkedList<E> {
         return dataToGet;
     }
 
-    public static void main(String[] args) {
-        GenericLinkedList<String> songs = new GenericLinkedList<>();
-        songs.addToFront("Yo dawg song 1");
-        songs.addToRear("This going to the be song 2");
-        songs.addToFront("This is song 3");
-        songs.addToRear("Look! Song 4");
-        songs.addToFront("Sonnnnnnggggg 5!");
-        System.out.println(songs.toString());
-        songs.removeFromFront();
-        songs.removeFromRear();
-        System.out.println(songs.toString());
-        System.out.println(songs.contains("Look! Song 4"));
+    private class Node<E> { //inner class
+        E data;
+        Node<E> next;
+
+        Node(E data, Node<E> next) {
+            this.data = data;
+            this.next = next;
+        }
     }
 }

@@ -13,6 +13,7 @@ public class Car implements Groomable {
         this.model = model;
         this.year = year;
     }
+
     public void start() {
         if (charge > 0) {
             System.out.println("Ding!");

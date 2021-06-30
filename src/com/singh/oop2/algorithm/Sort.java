@@ -9,7 +9,7 @@ public class Sort {
 
         for (int unSortedStart = 0; unSortedStart < list.length - 1; unSortedStart++) {
             minIndex = unSortedStart;
-            for (int currentIndex = unSortedStart+1; currentIndex < list.length; currentIndex++) {
+            for (int currentIndex = unSortedStart + 1; currentIndex < list.length; currentIndex++) {
                 if (list[currentIndex].compareTo(list[minIndex]) < 0) {
                     minIndex = currentIndex;
                 }
@@ -26,7 +26,7 @@ public class Sort {
     public static void mergeSort(int[] list, int start, int end) {
         if (start == end) {
             return;
-        } else if (start == end-1) {
+        } else if (start == end - 1) {
             if (list[start] <= list[end]) {
                 return;
             } else { // swap
@@ -37,7 +37,7 @@ public class Sort {
             }
         }
 
-        int mid = (end-start)/2;
+        int mid = (end - start) / 2;
         mergeSort(list, start, start + mid);
         mergeSort(list, start + mid + 1, end);
         merge(list, start, start + mid, end);
@@ -50,10 +50,10 @@ public class Sort {
         int[] leftHalf = new int[leftHalfSize];
         int[] rightHalf = new int[rightHalfSize];
 
-        for (int i=0; i<leftHalfSize; ++i)
+        for (int i = 0; i < leftHalfSize; ++i)
             leftHalf[i] = list[leftHalfStart + i];
-        for (int j=0; j<rightHalfSize; ++j)
-            rightHalf[j] = list[rightHalfStart + 1+ j];
+        for (int j = 0; j < rightHalfSize; ++j)
+            rightHalf[j] = list[rightHalfStart + 1 + j];
 
         int i = 0;
         int j = 0;
@@ -86,7 +86,7 @@ public class Sort {
     public static void mergeSort(Comparable[] list, int start, int end) {
         if (start == end) {
             return;
-        } else if (start == end-1) {
+        } else if (start == end - 1) {
             if (list[start].compareTo(list[end]) <= 0) {
 
                 return;
@@ -98,7 +98,7 @@ public class Sort {
             }
         }
 
-        int mid = (end-start)/2;
+        int mid = (end - start) / 2;
         mergeSort(list, start, start + mid);
         mergeSort(list, start + mid + 1, end);
         merge(list, start, start + mid, end);
@@ -111,10 +111,10 @@ public class Sort {
         Comparable[] leftHalf = new Comparable[leftHalfSize];
         Comparable[] rightHalf = new Comparable[rightHalfSize];
 
-        for (int i=0; i<leftHalfSize; ++i)
+        for (int i = 0; i < leftHalfSize; ++i)
             leftHalf[i] = list[leftHalfStart + i];
-        for (int j=0; j<rightHalfSize; ++j)
-            rightHalf[j] = list[rightHalfStart + 1+ j];
+        for (int j = 0; j < rightHalfSize; ++j)
+            rightHalf[j] = list[rightHalfStart + 1 + j];
 
         int i = 0;
         int j = 0;

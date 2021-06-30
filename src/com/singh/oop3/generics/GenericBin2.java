@@ -12,6 +12,12 @@ public class GenericBin2<X, Y> {
         this.content2 = content2;
     }
 
+    public static void main(String[] args) {
+        GenericBin2<String, String> test = new GenericBin2<>("I'm a basic String", "I'm another basic string!");
+        GenericBin2<Car, String> test2 =
+                new GenericBin2<>(new Car("Make", "Model", 1), "I'm the second bin!");
+    }
+
     public X getContent1() {
         return content1;
     }
@@ -26,12 +32,5 @@ public class GenericBin2<X, Y> {
 
     public void setContent2(Y content2) {
         this.content2 = content2;
-    }
-
-
-    public static void main(String[] args) {
-        GenericBin2<String, String> test = new GenericBin2<>("I'm a basic String", "I'm another basic string!");
-        GenericBin2<Car, String> test2 =
-                new GenericBin2<>(new Car("Make", "Model", 1), "I'm the second bin!");
     }
 }

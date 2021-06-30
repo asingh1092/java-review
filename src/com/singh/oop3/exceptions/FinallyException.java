@@ -7,7 +7,7 @@ public class FinallyException {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         boolean success = false;
-        int  fahrenheit = 0;
+        int fahrenheit = 0;
 
         while (!success) {
             try {
@@ -22,7 +22,7 @@ public class FinallyException {
             }
         }
         System.out.println("Enter a day of the week: ");
-        double celsius = (5.0/9) * (fahrenheit - 32);
+        double celsius = (5.0 / 9) * (fahrenheit - 32);
         System.out.printf("Fahrenheit: %d\n", fahrenheit);
         System.out.printf("Celsius:    %.1f\n", celsius);
     }
