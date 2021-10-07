@@ -27,6 +27,7 @@ public class CharBoolean {
         char myCopyrightUnicode = '\u00A9';
         System.out.println(myCopyrightUnicode);
 
+
         boolean myTrueBooleanValue = true;
         boolean myFalseBooleanValue = false;
         boolean isCustomerOverTwentyOne = true;
