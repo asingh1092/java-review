@@ -6,7 +6,7 @@ public class PrimitiveTypes {
     nibble = 4 bits -> 0000
     byte = 8 bits = 1 byte
         -> 256 combinations (2^8)
-        -> 00000000
+        -> 00000000 is zero
         -> signed: [-128 to 127] or [-2^7 to 2^7-1]
     short = 16 bits = 2 bytes (a "short word")
         -> 65,536 combinations (2^16)

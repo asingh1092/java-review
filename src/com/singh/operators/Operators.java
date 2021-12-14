@@ -43,5 +43,15 @@ public class Operators {
         // result = result - 2
         result -= 2;
         System.out.println(result);
+
+        boolean isAlien = false;
+
+        if (!isAlien) {
+            System.out.println("It is not an alien!");
+        }
+
+        boolean isCar = true;
+        boolean wasCar = isCar ? true : false;
+
     }
 }
