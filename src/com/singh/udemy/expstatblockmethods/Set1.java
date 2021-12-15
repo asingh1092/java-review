@@ -1,4 +1,4 @@
-package com.singh.udemy.exercises;
+package com.singh.udemy.expstatblockmethods;
 
 public class Set1 {
 
