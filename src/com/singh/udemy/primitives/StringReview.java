@@ -1,4 +1,4 @@
-package com.singh.primitives;
+package com.singh.udemy.primitives;
 
 public class StringReview {
 

@@ -1,4 +1,4 @@
-package com.singh.operators;
+package com.singh.udemy.operators;
 
 public class Operators {
 

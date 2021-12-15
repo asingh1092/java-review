@@ -45,7 +45,5 @@ public class PrimitiveTypes {
 
      37 (decimal) = 1*32 + 0*16 + 0*8 + 1*4 + 0*2 1*1
                   = 100101
-
-
      */
 }
