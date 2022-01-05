@@ -30,8 +30,6 @@ public class Insertion {
             return 0;
         }
 
-
-
         m <<= i;
         return n + m;
     }

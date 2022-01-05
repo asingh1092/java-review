@@ -22,6 +22,7 @@ public class ComputingTheParityOfAWord {
             input >>>= 1;
         }
 
+        System.out.println("Number of times through while loop: " + countBits);
         if (countBits % 2 == 0)
             return 0;
         else
@@ -41,5 +42,6 @@ public class ComputingTheParityOfAWord {
     public static void main(String[] args) {
         System.out.println(computeParity(11));
         System.out.println(computeParity(272));
+        System.out.println(computeParity(999999999));
     }
 }
