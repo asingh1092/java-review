@@ -28,6 +28,16 @@ public class ComputingTheParityOfAWord {
             return 1;
     }
 
+    public static short parity(long input) {
+        short result = 0;
+        while (input != 0) {
+            result ^= (input & 1);
+            input >>>= 1;
+        }
+        return result;
+    }
+
+
     public static void main(String[] args) {
         System.out.println(computeParity(11));
         System.out.println(computeParity(272));
