@@ -1,4 +1,4 @@
-package com.singh.epi.PrimitiveTypes;
+package com.singh.epi.primitivetypes;
 
 public class PrimitiveTypes {
 

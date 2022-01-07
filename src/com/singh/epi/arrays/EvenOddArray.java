@@ -1,6 +1,5 @@
-package com.singh.epi.Arrays;
+package com.singh.epi.arrays;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
