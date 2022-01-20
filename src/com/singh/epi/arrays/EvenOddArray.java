@@ -11,6 +11,8 @@ public class EvenOddArray {
     e.g. [0, 2, 12, 5, 10, 98] -> [0, 2, 12, 10, 98, 5]
      */
 
+    /* comment for testing*/
+
     public static void evenOdd(List<Integer> A) {
         int nextEven = 0;
         int nextOdd = A.size() - 1;
