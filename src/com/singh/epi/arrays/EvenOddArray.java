@@ -24,4 +24,10 @@ public class EvenOddArray {
             }
         }
     }
+
+    public static <T> void swap(T first, T second) {
+        T temp = second;
+        second = first;
+        first = second;
+    }
 }
