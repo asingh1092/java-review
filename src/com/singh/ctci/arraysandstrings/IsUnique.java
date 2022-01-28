@@ -46,5 +46,7 @@ public class IsUnique {
         String test2 = "tyuioplkjhgfdsa";
         System.out.println(isUnique(test1));
         System.out.println(isUnique(test2));
+        System.out.println(betterIsUnique(test1));
+        System.out.println(betterIsUnique(test2));
     }
 }
