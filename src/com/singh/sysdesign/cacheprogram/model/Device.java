@@ -1,4 +1,4 @@
-package com.singh.sysdesign.model;
+package com.singh.sysdesign.cacheprogram.model;
 
 import java.util.Objects;
 

@@ -1,7 +1,7 @@
-package com.singh.sysdesign.database;
+package com.singh.sysdesign.cacheprogram.database;
 
-import com.singh.sysdesign.model.Device;
-import com.singh.sysdesign.model.DeviceType;
+import com.singh.sysdesign.cacheprogram.model.Device;
+import com.singh.sysdesign.cacheprogram.model.DeviceType;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,10 +1,10 @@
-package com.singh.sysdesign;
+package com.singh.sysdesign.cacheprogram;
 
-import com.singh.sysdesign.cache.DeviceCache;
-import com.singh.sysdesign.database.DeviceRepository;
-import com.singh.sysdesign.model.Device;
-import com.singh.sysdesign.service.DeviceService;
-import com.singh.sysdesign.service.DeviceServiceImpl;
+import com.singh.sysdesign.cacheprogram.cache.DeviceCache;
+import com.singh.sysdesign.cacheprogram.database.DeviceRepository;
+import com.singh.sysdesign.cacheprogram.model.Device;
+import com.singh.sysdesign.cacheprogram.service.DeviceService;
+import com.singh.sysdesign.cacheprogram.service.DeviceServiceImpl;
 
 import java.util.List;
 
