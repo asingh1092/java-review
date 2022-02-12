@@ -5,20 +5,21 @@ import java.util.Objects;
 public class Device implements Comparable<Device> {
 
     private DeviceType type;
+    private int id;
     private String name;
-    private int address;
 
     public Device() {
         // default constructor
     }
 
-    public Device(String name) {
+    public Device(int id, String name) {
         this.name = name;
+        this.id = id;
     }
 
-    public Device(String name, int address) {
-        this.name = name;
-        this.address = address;
+    public Device(int id, String name, DeviceType type) {
+        this(id, name);
+        this.type = type;
     }
 
     public DeviceType getType() {
@@ -37,12 +38,12 @@ public class Device implements Comparable<Device> {
         this.name = name;
     }
 
-    public int getAddress() {
-        return address;
+    public int getId() {
+        return id;
     }
 
-    public void setAddress(int address) {
-        this.address = address;
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
@@ -50,7 +51,7 @@ public class Device implements Comparable<Device> {
         return "Device{" +
                 "type=" + type +
                 ", name='" + name + '\'' +
-                ", address=" + address +
+                ", id=" + id +
                 '}';
     }
 
@@ -59,12 +60,12 @@ public class Device implements Comparable<Device> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Device device = (Device) o;
-        return address == device.address && type == device.type && Objects.equals(name, device.name);
+        return id == device.id && type == device.type && Objects.equals(name, device.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(type, name, address);
+        return Objects.hash(type, name, id);
     }
 
     @Override

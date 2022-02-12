@@ -12,11 +12,10 @@ public class DeviceServiceImpl implements DeviceService {
     }
 
     public DeviceServiceImpl(DeviceRepository repository) {
-        this.repository = repository;
+        deviceList = repository.getDevices();
     }
 
     private List<Device> deviceList;
-    private DeviceRepository repository;
 
     @Override
     public void addDevice(Device device) {

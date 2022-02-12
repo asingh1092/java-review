@@ -10,19 +10,19 @@ public class DeviceCache {
     private DeviceService service;
     private List<Device> cachedDeviceList;
 
-    public List<Device> getCachedDeviceList() {
-        if (cachedDeviceList == null) {
-            cachedDeviceList = this.service.getDevices();
-        }
-        return cachedDeviceList;
-    }
-
     private DeviceCache() {
         //default constructor, set to private, so we can't actually ever make this
     }
 
     public DeviceCache(DeviceService service) {
         this.service = service;
+    }
+
+    public List<Device> getCachedDeviceList() {
+        if (cachedDeviceList == null) {
+            cachedDeviceList = this.service.getDevices();
+        }
+        return cachedDeviceList;
     }
 
     public void updateCachedDeviceList() {
