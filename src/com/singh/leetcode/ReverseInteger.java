@@ -1,6 +1,7 @@
 package com.singh.leetcode;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
@@ -22,23 +23,29 @@ public class ReverseInteger {
     public static int reverse(int x) {
         int ret = 0;
         boolean isNeg = x < 0;
-        Stack<Integer> stack = new Stack<>();
+        x = Math.abs(x);
 
         while (x > 0) {
-            stack.push( x % 10 );
+            ret = ret*10 + ( x % 10 );
             x = x / 10;
-        }
-
-        while (!stack.isEmpty()) {
-            ret = 10*ret + stack.pop();
         }
 
         if (isNeg) {
             ret = ret * -1;
         }
 
-        if (ret < (-2^31) || ret > ((2^31) - 1)) return 0;
+        if (ret < Integer.MIN_VALUE || ret > Integer.MAX_VALUE) return 0;
         return ret;
 
     }
+
+    public static void main(String[] args) {
+        int n = 123;
+        System.out.println(reverse(n));
+        int m = -143562352;
+        System.out.println(reverse(m));
+        int o = -143562;
+        System.out.println(reverse(o));
+    }
+
 }
