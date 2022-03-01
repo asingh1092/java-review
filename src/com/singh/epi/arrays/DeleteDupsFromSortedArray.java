@@ -11,11 +11,29 @@ public class DeleteDupsFromSortedArray {
     }
 
     /*
-     1 1 3 4 5 6 7 7 9 9
-     ^ ^
-
-     1 3 4 5 6 7 9
-                   ^ ^
+     1 1 3 4 4 5 6 7 7 9 9
+       u
+       ^ ^
+       sl i
+     1 3 3 4 4 5 6 7 7 9 9
+         ^ ^
+         sl i
+     1 3 4 4 4 5 6 7 7 9 9
+           ^ ^
+           sl i
+     1 3 4 4 4 5 6 7 7 9 9
+           ^   ^
+           sl  i
+     1 3 4 5 4 5 6 7 7 9 9
+             ^   ^
+             sl  i
+     1 3 4 5 6 5 6 7 7 9 9
+               ^   ^
+     1 3 4 5 6 7 6 7 7 9 9
+                 ^     ^
+     1 3 4 5 6 7 9 7 7 9 9
+                   ^      ^
+     now return everything from 0 to the slower index
 
      */
     public static List<Integer> removeDupsOptimal(List<Integer> sortedArray) {
@@ -23,8 +41,9 @@ public class DeleteDupsFromSortedArray {
         for (int i = 1; i < sortedArray.size(); i++) {
             if (!sortedArray.get(i).equals(sortedArray.get(slower - 1))) {
                 sortedArray.set(slower, sortedArray.get(i));
-                slower++;
+                slower++; // i++ too
             }
+            // only i++
         }
         return sortedArray.subList(0, slower);
     }
