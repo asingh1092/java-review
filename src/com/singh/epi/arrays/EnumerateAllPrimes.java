@@ -18,7 +18,7 @@ public class EnumerateAllPrimes {
             return Collections.emptyList();
         }
         List<Integer> ret = new ArrayList<>();
-        for (int i = 0; i < value + 1; i++) {
+        for (int i = 2; i < value + 1; i++) {
             if (i % 2 == 0 || i % 3 == 0 || i % 5 == 0) {
             } else {
                 ret.add(i);
