@@ -12,8 +12,7 @@ public class FindIfSubstring {
      justice
        ^
 
-     O(N + M) : O(1)
-
+     Time: O(N + M) :  Space : O(1)
      */
     public static boolean isSubstring(String smaller, String bigger) {
         // if smaller is bigger, then something is wrong
