@@ -7,22 +7,24 @@ import java.util.List;
 public class EnumerateAllPrimes {
 
     /*
-    a Number is prime when it is only divisible by itself or 1
+    a Number is prime when it is only divisible by itself or 1 or sqrt(n)
        * 0 and 1 dont count
        * 2, 3, 5, 7, 11, 13, 17, 19, etc are prime
      */
 
-    // solution is O(n) where n is the numbers up until value
-    public static List<Integer> primeListTo(int value) {
-        if (value < 0 || value == 0 || value == 1) {
+    // solution is O(n * sqrt(n)) = O(n^(3/2) where n is the numbers up until value
+    public static List<Integer> generatePrimesBF(int value) {
+        if (value < 2) {
             return Collections.emptyList();
         }
         List<Integer> ret = new ArrayList<>();
-        for (int i = 2; i < value + 1; i++) {
-            if (i % 2 == 0 || i % 3 == 0 || i % 5 == 0 || i % 7 == 0) {
-            } else {
-                ret.add(i);
-            }
+        // ignore anything negative + 0 & 1
+        for (int i = 2; i <= value + 1; i++) {
+            for (int j = 2; j <= Math.sqrt(value); j++)
+                if (i % j == 0) {
+                } else {
+                    ret.add(i);
+                }
         }
         return ret;
     }
@@ -57,5 +59,10 @@ public class EnumerateAllPrimes {
         System.out.println(generatePrimes(33));
         System.out.println(generatePrimes(100));
 
+        System.out.println(generatePrimesBF(10));
+        System.out.println(generatePrimesBF(18));
+        System.out.println(generatePrimesBF(19));
+        System.out.println(generatePrimesBF(33));
+        System.out.println(generatePrimesBF(100));
     }
 }
