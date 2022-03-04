@@ -30,6 +30,7 @@ public class FindIfSubstring {
             }
             bigIndex++;
         }
+        // if smallIndex has reached the size of the smaller index, return true else false
         return smallIndex == smallSize;
     }
 
