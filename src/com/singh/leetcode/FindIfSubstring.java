@@ -29,6 +29,12 @@ public class FindIfSubstring {
                 smallIndex++;
             }
             bigIndex++;
+            // figure out someway to restart smallIndex by checking following char for smaller and bigger
+            if (smallIndex != 0 && smallIndex < smallSize - 1 && bigIndex < bigSize - 1) {
+                if (smaller.charAt(smallIndex + 1) != bigger.charAt(bigIndex + 1)) {
+                    smallIndex = 0;
+                }
+            }
         }
         // if smallIndex has reached the size of the smaller index, return true else false
         return smallIndex == smallSize;
@@ -40,6 +46,9 @@ public class FindIfSubstring {
         System.out.println(isSubstring("blasphemy", "justice"));
         System.out.println(isSubstring("ho", "wholesome"));
         System.out.println(isSubstring("tyuio", "qwertyuiop"));
+        System.out.println(isSubstring("typ", "qwtruiyop"));
+        System.out.println(isSubstring("t", "afacdfacfktawdawdawdawdwa"));
+        System.out.println(isSubstring(" ", "lmdadujfrmoaewjfame"));
     }
 
 }
