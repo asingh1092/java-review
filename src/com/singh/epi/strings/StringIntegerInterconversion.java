@@ -27,7 +27,7 @@ public class StringIntegerInterconversion {
         int finalNum = 0;
         int factor = 1;
         for (int i = str.length() - 1; i >= 0; i--) {
-            int num = str.charAt(i);
+            int num = str.charAt(i) - '0'; // add - '0' because its constructive
             finalNum += num * factor;
             factor *= 10;
         }
