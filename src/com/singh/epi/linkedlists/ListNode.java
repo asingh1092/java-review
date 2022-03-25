@@ -23,7 +23,7 @@ public class ListNode<T> {
 //        this.prev = prev;
 //    }
 
-    public ListNode<T> empty() {
+    public static ListNode empty() {
         return new ListNode<>();
     }
 
@@ -47,16 +47,18 @@ public class ListNode<T> {
         return empty();
     }
 
-    public void insertAtNode(ListNode<T> node, ListNode<T> newNode) {
+    public static void insertAtNode(ListNode node, ListNode newNode) {
         newNode.next = node.next;
         node.next = newNode;
     }
 
-    public void deleteNode(ListNode<T> head, ListNode<T> node) {
-        ListNode<T> prev = empty();
+    public static void deleteNode(ListNode head, ListNode node) {
+        ListNode prev = empty();
         while (head.next != null) {
             if (head == node) {
                 prev.next = head.next;
+                head.next = null;
+                break;
             }
             prev = head;
             head = head.next;
@@ -70,5 +72,9 @@ public class ListNode<T> {
         head.next.next = new ListNode<>(3);
         System.out.println(head);
         System.out.println(head.searchList(head, 5));
+        insertAtNode(head.next, new ListNode<>(1));
+        System.out.println(head);
+        deleteNode(head, head.next.next);
+        System.out.println(head);
     }
 }
