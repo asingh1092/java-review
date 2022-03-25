@@ -47,6 +47,22 @@ public class ListNode<T> {
         return empty();
     }
 
+    public void insertAtNode(ListNode<T> node, ListNode<T> newNode) {
+        newNode.next = node.next;
+        node.next = newNode;
+    }
+
+    public void deleteNode(ListNode<T> head, ListNode<T> node) {
+        ListNode<T> prev = empty();
+        while (head.next != null) {
+            if (head == node) {
+                prev.next = head.next;
+            }
+            prev = head;
+            head = head.next;
+        }
+    }
+
 
     public static void main(String[] args) {
         ListNode<Integer> head = new ListNode<>(1);
