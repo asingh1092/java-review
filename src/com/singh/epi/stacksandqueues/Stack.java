@@ -2,6 +2,10 @@ package com.singh.epi.stacksandqueues;
 
 import java.util.NoSuchElementException;
 
+/**
+ *  In java collections, use the Deque<T> interface
+ * @param <T> data type
+ */
 public class Stack<T> {
     private Node<T> top;
 
