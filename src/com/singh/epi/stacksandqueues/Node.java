@@ -1,6 +1,6 @@
 package com.singh.epi.stacksandqueues;
 
-public class Node<T> {
+public class Node<T> implements Comparable<T> {
     private T data = null;
     private Node<T> next;
 
@@ -38,5 +38,10 @@ public class Node<T> {
                 "data=" + data +
                 ", next=" + next +
                 '}';
+    }
+
+    @Override
+    public int compareTo(T otherData) {
+        return this.data.hashCode() - otherData.hashCode();
     }
 }
